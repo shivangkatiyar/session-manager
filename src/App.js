@@ -1,11 +1,24 @@
-import logo from './logo.svg';
+import React from "react";
+import Header from "./Componenets/Header";
+import Table from "./Componenets/Table";
+import EditSession from "./Componenets/EditSession";
 import './App.css';
+import {Link, Route, Routes} from "react-router-dom";
+import Bootstrap from "react-bootstrap";
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <>
+    
+      
+      <div className="App">
+        <Header />
+        <Routes>
+        <Route path = "/EditSession" element = {<EditSession />} />
+      </Routes>
+        <Table />
+      </div>
+      </>
   );
 }
 
