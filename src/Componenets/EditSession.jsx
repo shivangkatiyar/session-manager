@@ -20,7 +20,7 @@ function EditSession() {
                     <td><div class="align"><span>Owners</span><input type="text"/></div></td>
                     <td><div class="align"><span>Session Name</span><input type="text"/></div></td>
                     <td><div class="align"><span>Start Date</span><input type="date"/></div></td>
-                </tr> */}
+                </tr> */}       
                 <tr>
                     <td colspan="6" align="right"><div class="btn btn-outline-danger m-3" >Cancel</div><div class="btn btn-danger">Save</div></td>
     
