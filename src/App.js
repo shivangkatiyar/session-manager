@@ -3,11 +3,11 @@ import Header from "./Componenets/Header";
 import Table from "./Componenets/Table";
 import EditSession from "./Componenets/EditSession";
 import './App.css';
-import {Link, Route, Routes} from "react-router-dom";
-import Bootstrap from "react-bootstrap";
+import {Route, Routes} from "react-router-dom";
+// import AddTableRows from "./Componenets/AddTableRows";
 
 function App() {
-  return (
+  return (                    
     <>
     
       

@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import EditSession from "./EditSession";
+import data from "./mock-data.json";
 function Table() {
+    const [contacts, setContacts] = useState(data);
     return (
+        
         <div className = "FirstPage">
         <div className=" box-2 container-fluid shadow rounded bg-light">
             <div className="stk">
@@ -17,7 +19,7 @@ function Table() {
             </div>
 
             <table cellpadding="10px">
-                <thead style={{ "background-color": "rgb(185, 8, 8)", "color": "white" }}>
+                <thead style={{"background-color": "rgb(185, 8, 8)", "color": "white" }}>
                     <tr>
                         <th>ID</th>
                         <th>Session Name</th>
@@ -27,9 +29,25 @@ function Table() {
                         <th>Actions</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {contacts.map((contact) => (
+                        <tr>
+                            <td>{contact.ID}</td>
+                            <td>{contact["Session Name"]}</td>
+                            <td>{contact["Start Date"]}</td>
+                            <td>{contact["End Date"]}</td>
+                            <td>{contact.Owners}</td>
+                            <td>{contact.Actions}</td>
+                            
+                        </tr>
+                    )
+                    )}
+                </tbody>
             </table>
         </div>
         </div>
     );
 }
+// export const contacts = true;
+// export const setContacts = true;
 export default Table;
