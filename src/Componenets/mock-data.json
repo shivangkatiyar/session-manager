@@ -1,17 +1,17 @@
 [
     {
-      "ID":51,
-      "Session Name": "Random",
-      "Start Date": "09/01/20",
-      "End Date": "02/03/20",
+        "ID":"1",
+      "Event_Name": "Random",
+      "Start_Date": "09/01/20",
+      "End_Date": "02/03/20",
       "Owners": "Name",
       "Actions": "Delete"
     },
     {
-        "ID":52,
-        "Session Name": "Random",
-        "Start Date": "09/01/20",
-        "End Date": "02/03/20",
+        "ID":"2",
+        "Event_Name": "Random",
+        "Start_Date": "09/01/20",
+        "End_Date": "02/03/20",
         "Owners": "Name",
         "Actions": "Delete"
       }
