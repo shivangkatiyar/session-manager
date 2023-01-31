@@ -12,7 +12,7 @@ export default function Parent() {
 
     return (
         <>
-            {location.pathname === '/EditSession' && <EditSession contacts={contacts} setContacts={setContacts} />}
+            {/* {location.pathname === '/EditSession' && <EditSession contacts={contacts} setContacts={setContacts} />} */}
             <Table contacts={contacts} />
         </>
     )
