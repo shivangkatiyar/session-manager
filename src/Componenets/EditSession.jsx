@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa"
 
 function EditSession(props) {
+
     const [contacts, setContacts] = useState(data);
     const navigate = useNavigate();
     const [addFormData, setAddFormData] = useState({
@@ -11,7 +12,7 @@ function EditSession(props) {
         Event_Name: "",
         Start_Date: "",
         End_Date: "",
-        Owners: "",
+        Owner: "",
         Event_Name: "",
         Start_Date: ""
     })
@@ -35,7 +36,7 @@ function EditSession(props) {
             Event_Name: addFormData.Event_Name,
             Start_Date: addFormData.Start_Date,
             End_Date: addFormData.End_Date,
-            Owners: addFormData.Owners,
+            Owner: addFormData.Owner,
             Event_Name: addFormData.Event_Name,
             Start_Date: addFormData.Start_Date,
         };
@@ -56,13 +57,13 @@ function EditSession(props) {
                     <form onSubmit={handleAddFormSubmit} action="">
                         <table cellpadding="24px" >
                             <tr>
-                                <td><div class="align"><span>ID</span><input type="text" name="ID" required="required" placeholder="Enter unique ID" onChange={handleAddFormChange} />{ }</div></td>
+                                {/* <td><div class="align"><span>ID</span><input type="text" name="ID" required="required" placeholder="Enter unique ID" onChange={handleAddFormChange} />{ }</div></td> */}
                                 <td><div class="align"><span>Event Name</span><input type="text" name="Event_Name" required="required" placeholder="Enter evemt name" onChange={handleAddFormChange} />{ }</div></td>
                                 <td><div class="align"><span>Start Date</span><input type="date" name="Start_Date" required="required" placeholder="Enter start date" onChange={handleAddFormChange} /></div></td>
                                 <td><div class="align"><span>End Date</span><input type="date" name="End_Date" required="required" placeholder="Enter end date" onChange={handleAddFormChange} /></div></td>
-                                <td><div class="align"><span>Owners</span><input type="text" name="Owners" required="required" placeholder="Enter owner name" onChange={handleAddFormChange} /></div></td>
-                                <td><div class="align"><span>Event Name</span><input type="text" name="Event_Name" required="required" placeholder="Enter event name" onChange={handleAddFormChange} /></div></td>
-                                <td><div class="align"><span>Start Date</span><input type="date" name="Start_Date" required="required" placeholder="Enter start date" onChange={handleAddFormChange} /></div></td>
+                                <td><div class="align"><span>Owner</span><input type="text" name="Owner" required="required" placeholder="Enter owner name" onChange={handleAddFormChange} /></div></td>
+                                {/* <td><div class="align"><span>Event Name</span><input type="text" name="Event_Name" required="required" placeholder="Enter event name" onChange={handleAddFormChange} /></div></td> */}
+                                {/* <td><div class="align"><span>Start Date</span><input type="date" name="Start_Date" required="required" placeholder="Enter start date" onChange={handleAddFormChange} /></div></td> */}
                             </tr>
                             <tr>
                                 <td colspan="10" align="right"><button class="btn btn-outline-danger m-3" type="submit" >Cancel</button><button class="btn btn-danger" type="submit">Save</button></td>

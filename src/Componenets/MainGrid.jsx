@@ -1,6 +1,10 @@
 import 'react-data-grid/lib/styles.css';
 import DataGrid from 'react-data-grid';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import data from "./mock-data.json"
+import { useState } from 'react';
+
+
 
 
 const columns = [
@@ -10,20 +14,27 @@ const columns = [
   { key: 'End_Date', name: 'End Date' }
 ];
 
-const rows = [
-  { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
-  { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
-  { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
-  { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
-  { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
-  { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
-  { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
-  { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
-  { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
+// const rows = [
+//   { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
+//   { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
+//   { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
+//   { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
+//   { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
+//   { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
+//   { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
+//   { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
+//   { Event_Name: "Bootcamp", Owner: "tanay", Start_Date: "3232", End_Date: "rwrw" },
 
-];
+// ];
 
-function MainGrid() {
+const rows = data
+
+
+
+function MainGrid(props) {
+  const [contacts, setContacts] = useState([data]);
+  const location = useLocation();
+  
   return(
     <>
     <div className = "FirstPage">

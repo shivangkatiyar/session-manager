@@ -1,18 +1,12 @@
 [
-    {
-        "ID":"1",
-      "Event_Name": "Random",
-      "Start_Date": "09/01/20",
-      "End_Date": "02/03/20",
-      "Owners": "Name",
-      "Actions": "Delete"
-    },
-    {
-        "ID":"2",
-        "Event_Name": "Random",
-        "Start_Date": "09/01/20",
-        "End_Date": "02/03/20",
-        "Owners": "Name",
-        "Actions": "Delete"
-      }
-  ]
+  { "Event_Name": "Bootcamp", "Owner": "tanay", "Start_Date": "3232", "End_Date": "rwrw" },
+  { "Event_Name": "Bootcamp", "Owner": "tanay", "Start_Date": "3232", "End_Date" : "rwrw" },
+  { "Event_Name": "Bootcamp", "Owner": "tanay", "Start_Date": "3232", "End_Date" : "rwrw" },
+  { "Event_Name": "Bootcamp", "Owner": "tanay", "Start_Date": "3232", "End_Date" : "rwrw" },
+  { "Event_Name": "Bootcamp", "Owner": "tanay", "Start_Date": "3232", "End_Date" : "rwrw" },
+  { "Event_Name": "Bootcamp", "Owner": "tanay", "Start_Date": "3232", "End_Date" : "rwrw" },
+  { "Event_Name": "Bootcamp", "Owner": "tanay", "Start_Date": "3232", "End_Date" : "rwrw" },
+  { "Event_Name": "Bootcamp", "Owner": "tanay", "Start_Date": "3232", "End_Date" : "rwrw" },
+  { "Event_Name": "Bootcamp", "Owner": "tanay", "Start_Date": "3232", "End_Date" : "rwrw" }
+
+]
