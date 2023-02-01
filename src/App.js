@@ -4,7 +4,7 @@ import Parent from "./Componenets/Parent";
 import EditSession from "./Componenets/EditSession";
 import './App.css';
 import { Route, Routes } from "react-router-dom";
-import Internal from "./Componenets/internal";
+import Internal from "./Componenets/InternalGrid";
 // import AddTableRows from "./Componenets/AddTableRows";
 import Second from "./Screens/Second";
 import HomeScreen from "./Screens/HomeScreen";

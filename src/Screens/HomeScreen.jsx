@@ -1,12 +1,12 @@
 import React from 'react'
-import GridInternal from '../Componenets/GridInternal'
+import MainGrid from '../Componenets/MainGrid'
 import Parent from '../Componenets/Parent'
 
 function HomeScreen() {
   return (
     <>
     {/* <Parent /> */}
-    <GridInternal />
+    <MainGrid />
     </>
   )
 }

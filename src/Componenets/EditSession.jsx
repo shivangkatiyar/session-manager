@@ -25,7 +25,7 @@ function EditSession(props) {
         newFormData[fieldName] = fieldValue;
         setAddFormData(newFormData);
 
-    };
+    }; 
 
     const handleAddFormSubmit = (event) => {
         event.preventDefault();
@@ -48,7 +48,7 @@ function EditSession(props) {
                 <Link to="/" style={{ "color": "black", "text-decoration": "none" }}>
                     <FaArrowLeft size={20} />
                 </Link>
-                <h3 style={{"margin-bottom": "0"}}>Edit Session</h3>
+                <h3 style={{"margin-bottom": "0"}}>Edit Event</h3>
             </nav>
 
             <div className="EditClass">
