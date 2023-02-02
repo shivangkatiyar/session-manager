@@ -8,6 +8,7 @@ import Internal from "./Componenets/InternalGrid";
 // import AddTableRows from "./Componenets/AddTableRows";
 import Second from "./Screens/Second";
 import HomeScreen from "./Screens/HomeScreen";
+import AddLogic from "./Componenets/AddLogic";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/EditSession" element={<Second />} />
+          <Route path="/AddLogic" element={<Second />} />
           <Route path="/" element={<HomeScreen />} ></Route>
         </Routes>
       </div>

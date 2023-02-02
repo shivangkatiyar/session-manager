@@ -3,6 +3,7 @@ import DataGrid from 'react-data-grid';
 import { Link, useLocation } from "react-router-dom";
 import data from "./mock-data.json"
 import { useState } from 'react';
+import AddLogic from './AddLogic';
 
 
 
@@ -42,7 +43,7 @@ function MainGrid(props) {
     <div className="stk">
                 <h2>Events</h2>
                 <nav>
-                    <Link to="/EditSession">
+                    <Link to="/AddLogic">
                         <div className="btn btn-danger">
                             + Add New Event
                         </div>

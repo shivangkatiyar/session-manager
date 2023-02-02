@@ -15,8 +15,8 @@ export default function Parent() {
         <>
             {/* {location.pathname === '/EditSession' && <EditSession contacts={contacts} setContacts={setContacts} />} */}
             {location.pathname === '/AddLogic' && <AddLogic contacts={contacts} setContacts={setContacts} />} 
-
-            <Table contacts={contacts} />
+            
+            {/* <Table contacts={contacts} /> */}
         </>
     )
 }
