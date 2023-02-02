@@ -1,15 +1,17 @@
-import React from 'react'
-import EditSession from '../Componenets/EditSession'
-import Parent from '../Componenets/Parent'
+import React, {useState} from 'react'
 import InternalGrid from '../Componenets/InternalGrid'
 import AddLogic from '../Componenets/AddLogic'
+import AddSession from '../Componenets/AddSession';
 
-function second() {
+function second({contacts, setContacts, sessions, setSessions}) {
+  
+
+  
   return (
     <>
-    <AddLogic />
-    <InternalGrid />
-    {/* <Parent /> */}
+    <AddLogic contacts={contacts} setContacts={setContacts}/>
+    {/* {showPopup && <AddSession sessions={sessions} setSessions={setSessions} handleTogglePopup={handleTogglePopup}/>} */}
+    <InternalGrid sessions={sessions} setSessions={setSessions}/>
     
     </>
   )

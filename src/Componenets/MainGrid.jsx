@@ -1,15 +1,12 @@
 import 'react-data-grid/lib/styles.css';
 import DataGrid from 'react-data-grid';
-import { Link, useLocation } from "react-router-dom";
-import data from "./mock-data.json"
-import { useState } from 'react';
-import AddLogic from './AddLogic';
+import { Link } from "react-router-dom";
 
 
 
 
 const columns = [
-  { key: 'Event_Name', name: 'Event Name' },
+  { key: 'Event_Name', name: 'Event Name'},
   { key: 'Owner', name: 'Owner' },
   { key: 'Start_Date', name: 'Start Date' },
   { key: 'End_Date', name: 'End Date' }
@@ -28,13 +25,13 @@ const columns = [
 
 // ];
 
-const rows = data
+//const rows = data
 
 
 
 function MainGrid(props) {
-  const [contacts, setContacts] = useState([data]);
-  const location = useLocation();
+  //const [contacts, setContacts] = useState([data]);
+  //const location = useLocation();
   
   return(
     <>
@@ -51,7 +48,7 @@ function MainGrid(props) {
                 </nav>
             </div>
 
-     <DataGrid className = "grid" rowStyle = {{background: "white"}} columns={columns} rows={rows} />
+     <DataGrid className = "grid" rowStyle = {{background: "white"}} columns={columns} rows={props.contacts} />
      </div>
      </div>
      </>

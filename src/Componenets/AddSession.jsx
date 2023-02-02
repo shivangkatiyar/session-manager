@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa"
 
 
-function AddLogic({contacts, setContacts}) {
+function AddSession({sessions, setSessions}) {
     //const [contacts, setContacts] = useState(data);
     const navigate = useNavigate();
     const [addFormData, setAddFormData] = useState({
@@ -28,14 +28,14 @@ function AddLogic({contacts, setContacts}) {
     const handleAddFormSubmit = (event) => {
         event.preventDefault();
 
-        const newContact = {
-            Event_Name: addFormData.Event_Name,
+        const newSession = {
+            Session_Name: addFormData.Session_Name,
             Start_Date: addFormData.Start_Date,
             End_Date: addFormData.End_Date,
             Owner: addFormData.Owner,
         };
-        setContacts( [...contacts, newContact]);
-        console.log(contacts)
+        setSessions( [...sessions, newSession]);
+        console.log(sessions)
     };
   return (
     <div class="flex flex-column">
@@ -52,7 +52,7 @@ function AddLogic({contacts, setContacts}) {
                 <table cellpadding="24px" >
                     <tr>
                         {/* <td><div class="align"><span>ID</span><input type="text" name="ID" required="required" placeholder="Enter unique ID" onChange={handleAddFormChange} />{ }</div></td> */}
-                        <td><div class="align"><span>Event Name</span><input type="text" name="Event_Name" required="required" placeholder="Enter evemt name" onChange={handleAddFormChange} />{ }</div></td>
+                        <td><div class="align"><span>Session Name</span><input type="text" name="Session_Name" required="required" placeholder="Enter session name" onChange={handleAddFormChange} />{ }</div></td>
                         <td><div class="align"><span>Start Date</span><input type="date" name="Start_Date" required="required" placeholder="Enter start date" onChange={handleAddFormChange} /></div></td>
                         <td><div class="align"><span>End Date</span><input type="date" name="End_Date" required="required" placeholder="Enter end date" onChange={handleAddFormChange} /></div></td>
                         <td><div class="align"><span>Owner</span><input type="text" name="Owner" required="required" placeholder="Enter owner name" onChange={handleAddFormChange} /></div></td>
@@ -73,4 +73,4 @@ function AddLogic({contacts, setContacts}) {
   )
 }
 
-export default AddLogic
+export default AddSession

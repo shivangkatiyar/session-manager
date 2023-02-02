@@ -1,16 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "./Componenets/Header";
-import Parent from "./Componenets/Parent";
-import EditSession from "./Componenets/EditSession";
 import './App.css';
 import { Route, Routes } from "react-router-dom";
-import Internal from "./Componenets/InternalGrid";
 // import AddTableRows from "./Componenets/AddTableRows";
 import Second from "./Screens/Second";
 import HomeScreen from "./Screens/HomeScreen";
-import AddLogic from "./Componenets/AddLogic";
+import data from './Componenets/mock-data.json'
+import initial_session from './Componenets/mock-session.json'
 
 function App() {
+  const [contacts, setContacts] = useState(data);
+  const [sessions, setSessions] = useState(initial_session)
   return (
     <>
 
@@ -18,8 +18,8 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/AddLogic" element={<Second />} />
-          <Route path="/" element={<HomeScreen />} ></Route>
+          <Route path="/AddLogic" element={<Second contacts={contacts} setContacts={setContacts} sessions={sessions} setSessions={setSessions} />} />
+          <Route path="/" element={<HomeScreen contacts={contacts} setContacts={setContacts}/>} ></Route>
         </Routes>
       </div>
     </>
