@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa"
+import {nanoid} from "nanoid";
 
 
 function AddLogic({contacts, setContacts}) {
-    //const [contacts, setContacts] = useState(data);
-    const navigate = useNavigate();
     const [addFormData, setAddFormData] = useState({
-        Event_Name: "",
-        Owner: "",
-        Start_Date: "",
-        End_Date: ""
+        id: "",
+        Training_Type: "",
+        Training_Area: "",
+        Actions: "",
     })
 
    const handleAddFormChange = (event) => {
@@ -29,10 +28,10 @@ function AddLogic({contacts, setContacts}) {
         event.preventDefault();
 
         const newContact = {
-            Event_Name: addFormData.Event_Name,
-            Start_Date: addFormData.Start_Date,
-            End_Date: addFormData.End_Date,
-            Owner: addFormData.Owner,
+            id: nanoid(),
+            Training_Type: addFormData.Training_Type,
+            Training_Area: addFormData.Training_Area,
+            Actions: "actions",
         };
         setContacts( [...contacts, newContact]);
         console.log(contacts)
@@ -51,13 +50,8 @@ function AddLogic({contacts, setContacts}) {
             <form onSubmit={handleAddFormSubmit} action="">
                 <table cellpadding="24px" >
                     <tr>
-                        {/* <td><div class="align"><span>ID</span><input type="text" name="ID" required="required" placeholder="Enter unique ID" onChange={handleAddFormChange} />{ }</div></td> */}
-                        <td><div class="align"><span>Event Name</span><input type="text" name="Event_Name" required="required" placeholder="Enter evemt name" onChange={handleAddFormChange} />{ }</div></td>
-                        <td><div class="align"><span>Start Date</span><input type="date" name="Start_Date" required="required" placeholder="Enter start date" onChange={handleAddFormChange} /></div></td>
-                        <td><div class="align"><span>End Date</span><input type="date" name="End_Date" required="required" placeholder="Enter end date" onChange={handleAddFormChange} /></div></td>
-                        <td><div class="align"><span>Owner</span><input type="text" name="Owner" required="required" placeholder="Enter owner name" onChange={handleAddFormChange} /></div></td>
-                        {/* <td><div class="align"><span>Event Name</span><input type="text" name="Event_Name" required="required" placeholder="Enter event name" onChange={handleAddFormChange} /></div></td> */}
-                        {/* <td><div class="align"><span>Start Date</span><input type="date" name="Start_Date" required="required" placeholder="Enter start date" onChange={handleAddFormChange} /></div></td> */}
+                        <td><div class="align"><span>Training Type</span><input type="text" name="Training_Type" required="required" placeholder="Enter training type" onChange={handleAddFormChange} /></div></td>
+                        <td><div class="align"><span>Training Area</span><input type="text" name="Training_Area" required="required" placeholder="Enter training area" onChange={handleAddFormChange} /></div></td>
                     </tr>
                     <tr>
                         <td colspan="10" align="right"><button class="btn btn-outline-danger m-3" type="submit" >Cancel</button><button class="btn btn-danger" type="submit" onClick={handleAddFormSubmit}>Save</button></td>

@@ -1,16 +1,22 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa"
+import {nanoid} from "nanoid";
 
 
-function AddSession({sessions, setSessions}) {
-    //const [contacts, setContacts] = useState(data);
-    const navigate = useNavigate();
+
+function AddSession({sessions, setSessions, handleTogglePopup}) {
     const [addFormData, setAddFormData] = useState({
-        Event_Name: "",
-        Owner: "",
-        Start_Date: "",
-        End_Date: ""
+        id:"",
+        Contribution_Type: "",
+        Date: "",
+        Topic_Item_Activity: "",
+        No_Of_Participants: "",
+        Duration: "",
+        Contributor_Email_Id: "",
+        EmpID: "",
+        SessionID: "",
+        Description: "",
     })
 
    const handleAddFormChange = (event) => {
@@ -29,10 +35,16 @@ function AddSession({sessions, setSessions}) {
         event.preventDefault();
 
         const newSession = {
-            Session_Name: addFormData.Session_Name,
-            Start_Date: addFormData.Start_Date,
-            End_Date: addFormData.End_Date,
-            Owner: addFormData.Owner,
+            id: nanoid(),
+            Contribution_Type: addFormData.Contribution_Type,
+            Date: addFormData.Date,
+            Topic_Item_Activity: addFormData.Topic_Item_Activity,
+            No_Of_Participants: addFormData.No_Of_Participants,
+            Duration: addFormData.Duration,
+            Contributor_Email_Id: addFormData.Contributor_Email_Id,
+            EmpID: addFormData.EmpID,
+            SessionID: addFormData.SessionID,
+            Description: addFormData.Description,
         };
         setSessions( [...sessions, newSession]);
         console.log(sessions)
@@ -48,22 +60,21 @@ function AddSession({sessions, setSessions}) {
 
     <div className="EditClass">
         <div class="container-fluid shadow rounded bg-light box-1">
-            <form onSubmit={handleAddFormSubmit} action="">
+            <form action="">
                 <table cellpadding="24px" >
                     <tr>
-                        {/* <td><div class="align"><span>ID</span><input type="text" name="ID" required="required" placeholder="Enter unique ID" onChange={handleAddFormChange} />{ }</div></td> */}
-                        <td><div class="align"><span>Session Name</span><input type="text" name="Session_Name" required="required" placeholder="Enter session name" onChange={handleAddFormChange} />{ }</div></td>
-                        <td><div class="align"><span>Start Date</span><input type="date" name="Start_Date" required="required" placeholder="Enter start date" onChange={handleAddFormChange} /></div></td>
-                        <td><div class="align"><span>End Date</span><input type="date" name="End_Date" required="required" placeholder="Enter end date" onChange={handleAddFormChange} /></div></td>
-                        <td><div class="align"><span>Owner</span><input type="text" name="Owner" required="required" placeholder="Enter owner name" onChange={handleAddFormChange} /></div></td>
-                        {/* <td><div class="align"><span>Event Name</span><input type="text" name="Event_Name" required="required" placeholder="Enter event name" onChange={handleAddFormChange} /></div></td> */}
-                        {/* <td><div class="align"><span>Start Date</span><input type="date" name="Start_Date" required="required" placeholder="Enter start date" onChange={handleAddFormChange} /></div></td> */}
+                        <td><div class="align"><span>Conrtibution Type</span><input type="text" name="Contribution_Type" required="required" placeholder="Contribution Type" onChange={handleAddFormChange} /></div></td><br/>
+                        <td><div class="align"><span>Date</span><input type="date" name="Date" required="required" placeholder="Date" onChange={handleAddFormChange}/></div></td><br/>
+                        <td><div class="align"><span>Topic/Item/Activity</span><input type="text" name="Topic_Item_Activity" required="required" placeholder="Topic_Item_Activity" onChange={handleAddFormChange} /></div></td><br/>
+                        <td><div class="align"><span>No_Of_Participants</span><input type="text" name="No_Of_Participants" required="required" placeholder="No. of Participants" onChange={handleAddFormChange} /></div></td><br/>
+                        <td><div class="align"><span>Duration</span><input type="text" name="Duration" required="required" placeholder="Duration" onChange={handleAddFormChange} /></div></td><br/>
+                        <td><div class="align"><span>Contributor_Email_Id</span><input type="text" name="Contributor_Email_Id" required="required" placeholder="Contributor email id" onChange={handleAddFormChange} /></div></td><br/>
+                        <td><div class="align"><span>EmpID</span><input type="text" name="EmpID" required="required" placeholder="Employee id" onChange={handleAddFormChange} /></div></td><br/>
+                        <td><div class="align"><span>SessionID</span><input type="text" name="SessionID" required="required" placeholder="Session id" onChange={handleAddFormChange} /></div></td><br/>
+                        <td><div class="align"><span>Description</span><input type="text" name="Description" required="required" placeholder="Description" onChange={handleAddFormChange} /></div></td><br/>
                     </tr>
                     <tr>
-                        <td colspan="10" align="right"><button class="btn btn-outline-danger m-3" type="submit" >Cancel</button><button class="btn btn-danger" type="submit" onClick={handleAddFormSubmit}>Save</button></td>
-
-                        {/* <td colspan="6" align="right"><div class="btn btn-outline-danger m-3" >Cancel</div><div class="btn btn-danger">Save</div></td> */}
-
+                        <td colspan="10" align="right"><button class="btn btn-outline-danger m-3" onClick={handleTogglePopup}>Cancel</button><button class="btn btn-danger" type="submit" onClick={handleAddFormSubmit}>Save</button></td>
                     </tr>
                 </table>
             </form>
