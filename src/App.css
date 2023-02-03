@@ -136,6 +136,11 @@ table {
 
 }
 
+/* .overflowx-auto {
+  overflow-x: hidden;
+  width: 100%;
+} */
+
 .box-2 {
   margin-bottom: 3rem;
 }
@@ -158,9 +163,14 @@ GoBack:link {
   justify-content: space-between;
   text-decoration: none;
 }
-.grid{
+
+.grid {
   /* background-color: white; */
   height: 600px;
-  width:100%;
+  width: 100%;
   background-colors: #eadce1;
+}
+
+.super-app-theme--header {
+  background: #757474;
 }

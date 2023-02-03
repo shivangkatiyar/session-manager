@@ -3,36 +3,16 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Link } from "react-router-dom";
 import React from "react";
 import Box from "@mui/material/Box";
-import { Button } from "@mui/material";
-
-
-
-
+import MainGridActions from './MainGridActions';
 
 
 function MainGrid(props) {
-
-  const [clickedRow, setClickedRow] = React.useState();
-  const onButtonClick = (e, row) => {
-    e.stopPropagation();
-    setClickedRow(row);
-  }
-
   const columns = [
-    { field: "Training_Type", headerName: "Training Type" },
-    { field: "Training_Area", headerName: "Training Area" },
-    {
-      field: "Actions", headerName: "Actions", renderCell: (params) => {
-        return (
-          <Button
-            onClick={(e) => onButtonClick(e, params.row)}
-          // variant="contained"
-          >
-            Delete
-          </Button>
-        );
-      }
-    }
+    { field: "Training_Type", headerName: "Training Type", headerClassName: 'super-app-theme--header'},
+    { field: "Training_Area", headerName: "Training Area", headerClassName: 'super-app-theme--header' },
+    {field: "Actions", headerName: "Actions", width: 150,
+    renderCell: (params) => <MainGridActions {...{params}}/>,
+  },
   ];
 
 
@@ -53,10 +33,9 @@ function MainGrid(props) {
           </div>
           <div>
             <Box sx={{ height: 400, width: "100%" }}>
-              <DataGrid columns={columns} rows={props.contacts} />
+              <DataGrid columns={columns} rows={props.contacts}/>
             </Box>
           </div>
-
         </div>
       </div>
     </>
