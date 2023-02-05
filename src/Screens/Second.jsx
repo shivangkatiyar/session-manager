@@ -4,8 +4,6 @@ import AddLogic from '../Componenets/AddLogic'
 
 function second({contacts, setContacts, sessions, setSessions}) {
   
-
-  
   return (
     <>
     <AddLogic contacts={contacts} setContacts={setContacts}/>

@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import { Link} from "react-router-dom";
-import { FaArrowLeft } from "react-icons/fa"
-import {nanoid} from "nanoid";
+import { nanoid } from "nanoid";
 
-
-
-function AddSession({sessions, setSessions, handleTogglePopup}) {
+function AddSession({ sessions, setSessions }, { handleTogglePopup }) {
     const [addFormData, setAddFormData] = useState({
-        id:"",
+        id: "",
         Contribution_Type: "",
         Date: "",
         Topic_Item_Activity: "",
@@ -19,7 +15,7 @@ function AddSession({sessions, setSessions, handleTogglePopup}) {
         Description: "",
     })
 
-   const handleAddFormChange = (event) => {
+    const handleAddFormChange = (event) => {
         event.preventDefault();
 
         const fieldName = event.target.getAttribute("name");
@@ -29,7 +25,7 @@ function AddSession({sessions, setSessions, handleTogglePopup}) {
         newFormData[fieldName] = fieldValue;
         setAddFormData(newFormData);
 
-    };  
+    };
 
     const handleAddFormSubmit = (event) => {
         event.preventDefault();
@@ -46,42 +42,74 @@ function AddSession({sessions, setSessions, handleTogglePopup}) {
             SessionID: addFormData.SessionID,
             Description: addFormData.Description,
         };
-        setSessions( [...sessions, newSession]);
+        setSessions([...sessions, newSession]);
         console.log(sessions)
     };
-  return (
-    <div class="flex flex-column">
-    <nav className="GoBack">
-        <Link to="/" style={{ "color": "black", "text-decoration": "none" }}>
-            <FaArrowLeft size={20} />
-        </Link>
-        <h3 style={{"margin-bottom": "0"}}>Edit Event</h3>
-    </nav>
-
-    <div className="EditClass">
-        <div class="container-fluid shadow rounded bg-light box-1">
-            <form action="">
-                <table cellpadding="24px" >
-                    <tr>
-                        <td><div class="align"><span>Conrtibution Type</span><input type="text" name="Contribution_Type" required="required" placeholder="Contribution Type" onChange={handleAddFormChange} /></div></td><br/>
-                        <td><div class="align"><span>Date</span><input type="date" name="Date" required="required" placeholder="Date" onChange={handleAddFormChange}/></div></td><br/>
-                        <td><div class="align"><span>Topic/Item/Activity</span><input type="text" name="Topic_Item_Activity" required="required" placeholder="Topic_Item_Activity" onChange={handleAddFormChange} /></div></td><br/>
-                        <td><div class="align"><span>No_Of_Participants</span><input type="text" name="No_Of_Participants" required="required" placeholder="No. of Participants" onChange={handleAddFormChange} /></div></td><br/>
-                        <td><div class="align"><span>Duration</span><input type="text" name="Duration" required="required" placeholder="Duration" onChange={handleAddFormChange} /></div></td><br/>
-                        <td><div class="align"><span>Contributor_Email_Id</span><input type="text" name="Contributor_Email_Id" required="required" placeholder="Contributor email id" onChange={handleAddFormChange} /></div></td><br/>
-                        <td><div class="align"><span>EmpID</span><input type="text" name="EmpID" required="required" placeholder="Employee id" onChange={handleAddFormChange} /></div></td><br/>
-                        <td><div class="align"><span>SessionID</span><input type="text" name="SessionID" required="required" placeholder="Session id" onChange={handleAddFormChange} /></div></td><br/>
-                        <td><div class="align"><span>Description</span><input type="text" name="Description" required="required" placeholder="Description" onChange={handleAddFormChange} /></div></td><br/>
-                    </tr>
-                    <tr>
-                        <td colspan="10" align="right"><button class="btn btn-outline-danger m-3" onClick={handleTogglePopup}>Cancel</button><button class="btn btn-danger" type="submit" onClick={handleAddFormSubmit}>Save</button></td>
-                    </tr>
-                </table>
+    return (
+        <div>
+            <form>
+                <div class="form-group" id="form-group-1">
+                    <h2>Add Session</h2>
+                    <hr />
+                    <div class="form-control">
+                        <label>Contribution type</label>
+                        <select name="Contribution_Type" id="field1" onChange={handleAddFormChange}>
+                            <option value="1">Create/update content</option>
+                            <option value="2">Deliver/Mentor session</option>
+                            <option value="3">Review assignments</option>
+                            <option value="4">Coordinate training</option>
+                            <option value="5">Support user requests</option>
+                            <option value="6">Maintain Tool/System</option>
+                            <option value="7">Onboard content</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label>Date</label>
+                        <input name="Date" required="required" id="field2" type="Date" placeholder="Date" onChange={handleAddFormChange} />
+                    </div>
+                    <div class="form-control">
+                        <label for="field3">Duration</label>
+                        <input name="Duration" type="text" required="required" placeholder="Duration" id="field3" onChange={handleAddFormChange} />
+                    </div>
+                </div>
+                <div class="form-group" id="form-group-2">
+                    <div class="form-control">
+                        <label>EmpID</label>
+                        <input type="text" name="EmpID" required="required" id="field4" placeholder="Employee Id" onChange={handleAddFormChange} />
+                    </div>
+                    <div class="form-control">
+                        <label>SessionID</label>
+                        <input type="text" name="SessionID" required="required" id="field5" placeholder="Session Id" onChange={handleAddFormChange} />
+                    </div>
+                    <div class="form-control">
+                        <label>Contributor Email Id</label>
+                        <input type="text" name="Contributor_Email_Id" required="required" id="field6" placeholder="Contributor Email Id" onChange={handleAddFormChange} />
+                    </div>
+                    <div class="form-control">
+                        <label>No. of participants</label>
+                        <input type="text" name="No_Of_Participants" required="required" id="field7" placeholder="No Of Participants" onChange={handleAddFormChange} />
+                    </div>
+                </div>
+                <div class="form-group" id="form-group-3">
+                    <div class="form-control">
+                        <label>Topic/Item/Activity</label>
+                        <textarea name="Topic_Item_Activity" type="text" required="required" placeholder="Topic_Item_Activity" id="field8" onChange={handleAddFormChange} ></textarea>
+                    </div>
+                    <div class="form-control">
+                        <label>Description</label>
+                        <textarea name="Description" type="text" required="required" id="field9" onChange={handleAddFormChange} ></textarea>
+                    </div>
+                </div>
+                <div class="form-group" id="form-group-4">
+                    <div class="form-control">
+                        <input type="submit" value="OK" onClick={handleAddFormSubmit} />
+                    </div>
+                    <div class="form-control">
+                        <input type="button" value="CANCEL" onClick={handleTogglePopup} />
+                    </div>
+                </div>
             </form>
         </div>
-    </div>
-</div>
-  )
+    )
 }
-
 export default AddSession

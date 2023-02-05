@@ -11,11 +11,9 @@ function MainGrid(props) {
     { field: "Training_Type", headerName: "Training Type", headerClassName: 'super-app-theme--header'},
     { field: "Training_Area", headerName: "Training Area", headerClassName: 'super-app-theme--header' },
     {field: "Actions", headerName: "Actions", width: 150,
-    renderCell: (params) => <MainGridActions {...{params}}/>,
+    renderCell: (params) => <MainGridActions {...{params}} onClick={console.log(props.key)}/>,
   },
   ];
-
-
 
   return (
     <>

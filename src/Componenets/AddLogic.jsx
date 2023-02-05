@@ -54,10 +54,7 @@ function AddLogic({contacts, setContacts}) {
                         <td><div class="align"><span>Training Area</span><input type="text" name="Training_Area" required="required" placeholder="Enter training area" onChange={handleAddFormChange} /></div></td>
                     </tr>
                     <tr>
-                        <td colspan="10" align="right"><button class="btn btn-outline-danger m-3" type="submit" >Cancel</button><button class="btn btn-danger" type="submit" onClick={handleAddFormSubmit}>Save</button></td>
-
-                        {/* <td colspan="6" align="right"><div class="btn btn-outline-danger m-3" >Cancel</div><div class="btn btn-danger">Save</div></td> */}
-
+                        <td colspan="10" align="right"><button class="btn btn-outline-danger m-3">Cancel</button><button class="btn btn-danger" type="submit" onClick={handleAddFormSubmit}>Save</button></td>
                     </tr>
                 </table>
             </form>
