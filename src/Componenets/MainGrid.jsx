@@ -31,7 +31,7 @@ function MainGrid(props) {
           </div>
           <div>
             <Box sx={{ height: 400, width: "100%" }}>
-              <DataGrid columns={columns} rows={props.contacts}/>
+              <DataGrid styles columns={columns} rows={props.contacts}/>
             </Box>
           </div>
         </div>

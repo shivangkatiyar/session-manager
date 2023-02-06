@@ -93,20 +93,22 @@ function AddSession({ sessions, setSessions }, { handleTogglePopup }) {
                 <div class="form-group" id="form-group-3">
                     <div class="form-control">
                         <label>Topic/Item/Activity</label>
-                        <textarea name="Topic_Item_Activity" type="text" required="required" placeholder="Topic_Item_Activity" id="field8" onChange={handleAddFormChange} ></textarea>
+                        <textarea name="Topic_Item_Activity" type="text" required="required" placeholder="Topic/Item/Activity" id="field8" onChange={handleAddFormChange} ></textarea>
                     </div>
                     <div class="form-control">
                         <label>Description</label>
-                        <textarea name="Description" type="text" required="required" id="field9" onChange={handleAddFormChange} ></textarea>
+                        <textarea name="Description" type="text" required="required" placeholder="Description" id="field9" onChange={handleAddFormChange} ></textarea>
                     </div>
                 </div>
-                <div class="form-group" id="form-group-4">
-                    <div class="form-control">
-                        <input type="submit" value="OK" onClick={handleAddFormSubmit} />
-                    </div>
-                    <div class="form-control">
-                        <input type="button" value="CANCEL" onClick={handleTogglePopup} />
-                    </div>
+                <div class="form-group" id="form-group-4"  style={{display: "flex", justifyContent: "flex-end"}}>
+                    <tr>
+                        <td colSpan="10">
+                            <div>
+                                <input class="btn btn-outline-danger m-3" type="button" value="CANCEL" onClick={handleTogglePopup} />
+                                <input class="btn btn-danger" type="submit" value="Submit" onClick={handleAddFormSubmit} />
+                            </div>
+                        </td>
+                    </tr>
                 </div>
             </form>
         </div>

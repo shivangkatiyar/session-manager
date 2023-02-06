@@ -32,7 +32,7 @@ function AddLogic({contacts, setContacts}) {
             Training_Type: addFormData.Training_Type,
             Training_Area: addFormData.Training_Area,
             Actions: "actions",
-        };
+        }; 
         setContacts( [...contacts, newContact]);
         console.log(contacts)
     };

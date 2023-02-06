@@ -31,10 +31,10 @@ function InternalGrid({ sessions, setSessions},props) {
     return (
         <>
             <div className="FirstPage">
-                <div className=" box-2 container-fluid shadow rounded bg-light">
+                <div className="box-2 container-fluid shadow rounded bg-light">
                     <div>
-                        <div className="color-overlay d-flex justify-content-center align-items-center">
-                            <Popup trigger={<button className="btn btn-danger" style={{ "padding": "1rem 2rem 1rem 2rem", "float":"right" }} onClick={handleTogglePopup}> Add New Session</button>} position="right center" modal
+                        <div className="color-overlay d-flex justify-content-right align-items-center" >
+                            <Popup trigger={<button className="btn btn-danger" style={{"margin-top":"10px", "margin-bottom":"10px"}} onClick={handleTogglePopup}> Add New Session</button>} position="right center" modal
                                 nested>{
                                     close =>
                                     (
@@ -45,7 +45,7 @@ function InternalGrid({ sessions, setSessions},props) {
                         </div>
                     </div>
                     <div style={{ height: 300, width: "100%" }}>
-                        <DataGrid columns={columns} rows={sessions} />
+                        <DataGrid  columns={columns} rows={sessions} />
                     </div>
                 </div>
             </div>

@@ -200,7 +200,8 @@ GoBack:link {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+
+  /* border: 1px solid black; */
 
 }
 
@@ -210,24 +211,38 @@ GoBack:link {
 
 #form-group-1 .form-control {
   width: 33.333%;
+  margin:0.5rem;
+  /* margin-right: 0.5rem; */
+  /* border-spacing: 15px; */
   
 }
 
 #form-group-2 .form-control {
-  width: 50%;
+  width: 40%;
+  margin:0.5rem;
+
+  /* margin-right: 0.5rem; */
+
+  /* margin-right: 10px; */
+  /* border-spacing: 15px; */
 }
 
 #form-group-3 .form-control {
-  width: 100%;
+  width: 95%;
+  margin:0.5rem;
+
 }
 
 #form-group-4 .form-control {
   width: 6em;
+  margin:0.5rem;
+  float: right;
+
 }
 
 @media (max-width: 500px) {
   #form-group-1 .form-control {
-      width: 50%;
+    width: 50%;
   }
   
   #form-group-2 .form-control {
@@ -242,7 +257,13 @@ hr {
   height: 50px;
   margin-top: 0;
   margin-bottom: 5px;
-  border-bottom: 1px solid #1f1209;
-  box-shadow: 10px 10px 10px -5px #333;
+  /* border-bottom: 1px solid #1f1209;
+  box-shadow: 10px 10px 10px -5px #333; */
  margin: -50px auto 30px;
+ border-bottom: 1px solid #1f1209;
+ box-shadow: 10px 15px 20px -10px #ba131a;
+}
+
+.overflow{  
+  overflow-y:scroll;
 }
