@@ -8,9 +8,9 @@ import MainGridActions from './MainGridActions';
 
 function MainGrid(props) {
   const columns = [
-    { field: "Training_Type", headerName: "Training Type", headerClassName: 'super-app-theme--header'},
-    { field: "Training_Area", headerName: "Training Area", headerClassName: 'super-app-theme--header' },
-    {field: "Actions", headerName: "Actions", width: 150,
+    { field: "Training_Type", headerName: "Training Type", headerClassName: 'super-app-theme--header', width: 472},
+    { field: "Training_Area", headerName: "Training Area", headerClassName: 'super-app-theme--header',width:472 },
+    {field: "Actions", headerName: "Actions", headerClassName:'super-app-theme--header', width: 470,
     renderCell: (params) => <MainGridActions {...{params}} onClick={console.log(props.key)}/>,
   },
   ];
