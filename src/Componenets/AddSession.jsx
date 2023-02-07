@@ -54,13 +54,14 @@ function AddSession({ sessions, setSessions }, { handleTogglePopup }) {
                     <div class="form-control">
                         <label>Contribution type</label>
                         <select name="Contribution_Type" id="field1" onChange={handleAddFormChange}>
-                            <option value="1">Create/update content</option>
-                            <option value="2">Deliver/Mentor session</option>
-                            <option value="3">Review assignments</option>
-                            <option value="4">Coordinate training</option>
-                            <option value="5">Support user requests</option>
-                            <option value="6">Maintain Tool/System</option>
-                            <option value="7">Onboard content</option>
+                            <option hidden>Contribution Type</option>
+                            <option value="Create/update content">Create/update content</option>
+                            <option value="Deliver/Mentor session">Deliver/Mentor session</option>
+                            <option value="Review assignments">Review assignments</option>
+                            <option value="Coordinate training">Coordinate training</option>
+                            <option value="Support user requests">Support user requests</option>
+                            <option value="Maintain Tool/System">Maintain Tool/System</option>
+                            <option value="Onboard content">Onboard content</option>
                         </select>
                     </div>
                     <div class="form-control">

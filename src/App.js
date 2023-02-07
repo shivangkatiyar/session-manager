@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import Header from "./Componenets/Header";
 import './App.css';
 import { Route, Routes } from "react-router-dom";
-// import AddTableRows from "./Componenets/AddTableRows";
 import Second from "./Screens/Second";
 import HomeScreen from "./Screens/HomeScreen";
 import data from './Componenets/mock-data.json'
@@ -13,8 +12,6 @@ function App() {
   const [sessions, setSessions] = useState(initial_session)
   return (
     <>
-
-
       <div className="App">
         <Header />
         <Routes>

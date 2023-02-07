@@ -50,8 +50,41 @@ function AddLogic({contacts, setContacts}) {
             <form onSubmit={handleAddFormSubmit} action="">
                 <table cellpadding="24px" >
                     <tr>
-                        <td><div class="align"><span>Training Type</span><input type="text" name="Training_Type" required="required" placeholder="Enter training type" onChange={handleAddFormChange} /></div></td>
-                        <td><div class="align"><span>Training Area</span><input type="text" name="Training_Area" required="required" placeholder="Enter training area" onChange={handleAddFormChange} /></div></td>
+                        <td>
+                            <div class="align">
+                                <label>Training Type</label>
+                                <select name="Training_Type" onChange={handleAddFormChange} required= "required">
+                                    <option hidden>Training Type</option>
+                                    <option value="Bootcamp">Bootcamp</option>
+                                    <option value="Extended Bootcamp">Extended Bootcamp</option>
+                                    <option value="Weekly Talk">Weekly Talk</option>
+                                    <option value="Study Group">Study Group</option>
+                                    <option value="Pre Bootcamp">Pre Bootcamp</option>
+                                    <option value="Domain Training">Domain Training</option>
+                                    <option value="LDP">LDP</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="align">
+                            <label>Training Area</label>
+                                <select name="Training_Area" onChange={handleAddFormChange} required= "required">
+                                    <option hidden>Training Area</option>
+                                    <option value="SQL">SQL</option>
+                                    <option value="BI">BI</option>
+                                    <option value="Azure">Azure</option>
+                                    <option value="ML">ML</option>
+                                    <option value="Dynamics">Dynamics</option>
+                                    <option value="SSAS">SSAS</option>
+                                    <option value="Web Development">Web Development</option>
+                                    <option value="Process">Process</option>
+                                    <option value="Management">Management</option>
+                                    <option value="Domain">Domain</option>
+                                    <option value="Power-BI">Power-BI</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="10" align="right"><button class="btn btn-outline-danger m-3">Cancel</button><button class="btn btn-danger" type="submit" onClick={handleAddFormSubmit}>Save</button></td>
